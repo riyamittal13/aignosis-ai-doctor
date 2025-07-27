@@ -1,6 +1,8 @@
-streamlit
-sentence-transformers
+sentence-transformers==2.2.2
+torch==1.13.1
+transformers==4.25.1
 scikit-learn
+streamlit
+pandas
 numpy
 joblib
-torch
