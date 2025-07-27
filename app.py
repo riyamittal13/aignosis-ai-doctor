@@ -19,12 +19,12 @@ import torch
 
 model_st = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Force safe device placement manually
 try:
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    model_st.to(torch.device(device))
+    # Safe device placement (only works if device allows it)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model_st.to(device)
 except NotImplementedError:
-    # Fallback: skip device placement if not supported (Streamlit Cloud case)
+    # Streamlit Cloud workaround: silently skip device move
     pass
 
 # Precompute embeddings of disease names from precautions.csv
