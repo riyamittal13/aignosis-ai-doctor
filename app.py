@@ -13,7 +13,13 @@ precautions_df = pd.read_csv('precautions.csv')
 # Load the models
 clf = joblib.load("disease_prediction_model.pkl")
 le = joblib.load("label_encoder.pkl")
-model_st = SentenceTransformer('all-MiniLM-L6-v2', device = 'cpu')
+
+import torch
+model_st = SentenceTransformer('all-MiniLM-L6-v2')
+if torch.cuda.is_available():
+    model_st = model_st.to('cuda')
+else:
+    model_st = model_st.to('cpu')
 
 # Precompute embeddings of disease names from precautions.csv
 precaution_diseases = precautions_df['Disease'].tolist()
