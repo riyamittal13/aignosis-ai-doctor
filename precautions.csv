@@ -1,0 +1,21 @@
+Disease,Precaution_1,Precaution_2,Precaution_3
+Fungal infection,Use antifungal cream,Keep area dry,Consult a doctor
+Allergy,Avoid allergens,Use antihistamines,Consult a doctor
+GERD,Avoid spicy food,Don't lie down after eating,Take antacids
+Chronic cholestasis,Avoid fatty foods,Regular liver checkup,Use prescribed meds
+Drug Reaction,Stop suspected drug,Consult doctor,Drink plenty of water
+Diabetes,Exercise regularly,Monitor blood sugar,Avoid sugar
+Migraine,Avoid bright lights,Stay hydrated,Take prescribed meds
+Hypertension,Reduce salt intake,Exercise daily,Monitor BP
+Malaria,Use mosquito nets,Take antimalarials,Stay hydrated
+Chicken pox,Isolate patient,Use calamine lotion,Rest well
+Pneumonia,Take antibiotics,Stay hydrated,Consult doctor
+Bronchial Asthma,Avoid allergens,Use inhaler,Consult pulmonologist
+Tuberculosis,Complete full medication,Isolate from others,Wear a mask
+Jaundice,Avoid alcohol,Rest well,Consult doctor
+Hepatitis B,Get vaccinated,Avoid contaminated food,Consult doctor
+Hepatitis C,Use clean needles,Avoid alcohol,Consult doctor
+Common Cold,Rest well,Drink warm fluids,Take steam inhalation
+Typhoid,Drink boiled water,Complete antibiotics,Rest properly
+Dengue,Avoid mosquito bites,Stay hydrated,Consult doctor
+Covid-19,Isolate yourself,Use mask and sanitizer,Monitor oxygen level
