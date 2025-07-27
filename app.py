@@ -14,12 +14,18 @@ precautions_df = pd.read_csv('precautions.csv')
 clf = joblib.load("disease_prediction_model.pkl")
 le = joblib.load("label_encoder.pkl")
 
+from sentence_transformers import SentenceTransformer
 import torch
+
 model_st = SentenceTransformer('all-MiniLM-L6-v2')
-if torch.cuda.is_available():
-    model_st = model_st.to('cuda')
-else:
-    model_st = model_st.to('cpu')
+
+# Force safe device placement manually
+try:
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    model_st.to(torch.device(device))
+except NotImplementedError:
+    # Fallback: skip device placement if not supported (Streamlit Cloud case)
+    pass
 
 # Precompute embeddings of disease names from precautions.csv
 precaution_diseases = precautions_df['Disease'].tolist()
